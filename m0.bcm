@@ -12,11 +12,14 @@
 <org.eventb.core.scConstant name="waitingWagon" org.eventb.core.source="/projet/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.constant#-" org.eventb.core.type="ℙ(ℤ×DESTINATION)"/>
 </org.eventb.core.scInternalContext>
 <org.eventb.core.scInvariant name="c1" org.eventb.core.label="inv1" org.eventb.core.predicate="indice∈1 ‥ nbWaitingWagon" org.eventb.core.source="/projet/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="c2" org.eventb.core.label="inv2" org.eventb.core.predicate="toToulouse=DESTINATION" org.eventb.core.source="/projet/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#-" org.eventb.core.theorem="false"/>
 <org.eventb.core.scVariable name="indice" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/projet/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#*" org.eventb.core.type="ℤ"/>
-<org.eventb.core.scEvent name="indicf" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/projet/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'">
+<org.eventb.core.scVariable name="toToulouse" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/projet/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.variable#," org.eventb.core.type="ℙ(DESTINATION)"/>
+<org.eventb.core.scEvent name="toToulousf" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/projet/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'">
 <org.eventb.core.scAction name="'" org.eventb.core.assignment="indice ≔ 1" org.eventb.core.label="act1" org.eventb.core.source="/projet/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'|org.eventb.core.action#'"/>
+<org.eventb.core.scAction name="(" org.eventb.core.assignment="toToulouse ≔ ∅ ⦂ ℙ(DESTINATION)" org.eventb.core.label="act2" org.eventb.core.source="/projet/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#'|org.eventb.core.action#("/>
 </org.eventb.core.scEvent>
-<org.eventb.core.scEvent name="indicg" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Itere" org.eventb.core.source="/projet/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#+">
+<org.eventb.core.scEvent name="toToulousg" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Itere" org.eventb.core.source="/projet/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#+">
 <org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="indice≤nbWaitingWagon" org.eventb.core.source="/projet/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#+|org.eventb.core.guard#'" org.eventb.core.theorem="false"/>
 <org.eventb.core.scAction name="(" org.eventb.core.assignment="indice ≔ indice+1" org.eventb.core.label="act1" org.eventb.core.source="/projet/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#+|org.eventb.core.action#("/>
 </org.eventb.core.scEvent>
