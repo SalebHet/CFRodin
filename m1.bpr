@@ -1,30 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.prFile version="1">
-<org.eventb.core.prProof name="INITIALISATION/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.prProof name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(DESTINATION,{Toulouse},{Bayonne}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="DESTINATION={Toulouse,Bayonne}">
+<org.eventb.core.prIdent name="nbWagons" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ))⊆1 ‥ nbWagons"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="DESTINATION={Toulouse,Bayonne}">
 <org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="DESTINATION"/>
 <org.eventb.core.prIdent name="DESTINATION" org.eventb.core.type="ℙ(DESTINATION)"/>
 <org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="DESTINATION"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬Toulouse=Bayonne">
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬Toulouse=Bayonne">
 <org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="DESTINATION"/>
 <org.eventb.core.prIdent name="DESTINATION" org.eventb.core.type="ℙ(DESTINATION)"/>
 <org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="DESTINATION"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(DESTINATION,{Toulouse},{Bayonne})">
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(DESTINATION,{Toulouse},{Bayonne})">
 <org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="DESTINATION"/>
 <org.eventb.core.prIdent name="DESTINATION" org.eventb.core.type="ℙ(DESTINATION)"/>
 <org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="DESTINATION"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="toToulouse/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="DESTINATION">
 <org.eventb.core.lang name="L"/>
@@ -75,5 +85,190 @@
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="grouper/grd2/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="DESTINATION">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(DESTINATION,{Toulouse},{Bayonne}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5"/>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p6">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p7"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="indice" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="nbWagons" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="waitingWagon" org.eventb.core.type="ℙ(ℤ×DESTINATION)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="waitingWagon∈1 ‥ nbWagons → DESTINATION"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="indice+1∈dom(waitingWagon)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="DESTINATION={Toulouse,Bayonne}">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="DESTINATION"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="DESTINATION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬Toulouse=Bayonne">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="DESTINATION"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="DESTINATION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="waitingWagon∈ℤ ⇸ DESTINATION"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(DESTINATION,{Toulouse},{Bayonne})">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="DESTINATION"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="DESTINATION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="indice∈dom(waitingWagon)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="indice∈dom(waitingWagon)∧waitingWagon∈ℤ ⇸ DESTINATION∧indice+1∈dom(waitingWagon)"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="grouper/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(DESTINATION,{Toulouse},{Bayonne}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="indice" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="nbWagons" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="sameWagons" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="sameWagons⊆1 ‥ nbWagons∧indice∈1 ‥ nbWagons"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="sameWagons⊆1 ‥ nbWagons"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="sameWagons∪{indice}⊆1 ‥ nbWagons"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="DESTINATION={Toulouse,Bayonne}">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="DESTINATION"/>
+<org.eventb.core.prIdent name="DESTINATION" org.eventb.core.type="ℙ(DESTINATION)"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="DESTINATION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬Toulouse=Bayonne">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="DESTINATION"/>
+<org.eventb.core.prIdent name="DESTINATION" org.eventb.core.type="ℙ(DESTINATION)"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="DESTINATION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(DESTINATION,{Toulouse},{Bayonne})">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="DESTINATION"/>
+<org.eventb.core.prIdent name="DESTINATION" org.eventb.core.type="ℙ(DESTINATION)"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="DESTINATION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="⊤∧indice∈1 ‥ nbWagons"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="indice∈1 ‥ nbWagons"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="grouper/indice/EQL" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(DESTINATION,{Toulouse},{Bayonne}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="DESTINATION={Toulouse,Bayonne}">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="DESTINATION"/>
+<org.eventb.core.prIdent name="DESTINATION" org.eventb.core.type="ℙ(DESTINATION)"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="DESTINATION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬Toulouse=Bayonne">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="DESTINATION"/>
+<org.eventb.core.prIdent name="DESTINATION" org.eventb.core.type="ℙ(DESTINATION)"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="DESTINATION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(DESTINATION,{Toulouse},{Bayonne})">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="DESTINATION"/>
+<org.eventb.core.prIdent name="DESTINATION" org.eventb.core.type="ℙ(DESTINATION)"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="DESTINATION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="addToulouse/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(DESTINATION,{Toulouse},{Bayonne}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="nbWagons" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ))⊆1 ‥ nbWagons"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="DESTINATION={Toulouse,Bayonne}">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="DESTINATION"/>
+<org.eventb.core.prIdent name="DESTINATION" org.eventb.core.type="ℙ(DESTINATION)"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="DESTINATION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬Toulouse=Bayonne">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="DESTINATION"/>
+<org.eventb.core.prIdent name="DESTINATION" org.eventb.core.type="ℙ(DESTINATION)"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="DESTINATION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(DESTINATION,{Toulouse},{Bayonne})">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="DESTINATION"/>
+<org.eventb.core.prIdent name="DESTINATION" org.eventb.core.type="ℙ(DESTINATION)"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="DESTINATION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="addBayonne/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(DESTINATION,{Toulouse},{Bayonne}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="nbWagons" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ))⊆1 ‥ nbWagons"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="DESTINATION={Toulouse,Bayonne}">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="DESTINATION"/>
+<org.eventb.core.prIdent name="DESTINATION" org.eventb.core.type="ℙ(DESTINATION)"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="DESTINATION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬Toulouse=Bayonne">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="DESTINATION"/>
+<org.eventb.core.prIdent name="DESTINATION" org.eventb.core.type="ℙ(DESTINATION)"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="DESTINATION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(DESTINATION,{Toulouse},{Bayonne})">
+<org.eventb.core.prIdent name="Bayonne" org.eventb.core.type="DESTINATION"/>
+<org.eventb.core.prIdent name="DESTINATION" org.eventb.core.type="ℙ(DESTINATION)"/>
+<org.eventb.core.prIdent name="Toulouse" org.eventb.core.type="DESTINATION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
 </org.eventb.core.prFile>

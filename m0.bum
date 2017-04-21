@@ -6,23 +6,22 @@
 <org.eventb.core.action name=")" org.eventb.core.assignment="toBayonne ≔ ∅" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
 <org.eventb.core.seesContext name="(" org.eventb.core.target="c0"/>
-<org.eventb.core.invariant name=")" org.eventb.core.label="inv1" org.eventb.core.predicate="1≤indice"/>
+<org.eventb.core.invariant name=")" org.eventb.core.label="inv1" org.eventb.core.predicate="indice ∈ 1‥nbWagons+1"/>
 <org.eventb.core.variable name="*" org.eventb.core.identifier="indice"/>
 <org.eventb.core.variable name="," org.eventb.core.identifier="toToulouse"/>
-<org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="toToulouse = DESTINATION"/>
-<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AddToulouse">
-<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="indice ≤ nbWaitingWagon"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="toToulouse ⊆ 1‥nbWagons"/>
+<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addToulouse">
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="indice ≤ nbWagons"/>
 <org.eventb.core.guard name="'" org.eventb.core.label="grd2" org.eventb.core.predicate="waitingWagon(indice) = Toulouse"/>
-<org.eventb.core.action name="(" org.eventb.core.assignment="toToulouse ≔ toToulouse ∪ {waitingWagon(indice)} " org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="toToulouse ≔ toToulouse ∪ {indice} " org.eventb.core.label="act1"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="indice ≔ indice+1" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="/" org.eventb.core.identifier="toBayonne"/>
 <org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addBayonne">
-<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="waitingWagon(indice) = Bayonne"/>
-<org.eventb.core.action name="(" org.eventb.core.assignment="toBayonne ≔ toBayonne ∪ {waitingWagon(indice)}" org.eventb.core.label="act1"/>
-<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="indice ≤ nbWaitingWagon"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="indice ≤ nbWagons"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="toBayonne ≔ toBayonne ∪ {indice}" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="waitingWagon(indice) = Bayonne"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="indice ≔ indice+1" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
-<org.eventb.core.invariant name="1" org.eventb.core.label="inv3" org.eventb.core.predicate="toBayonne = DESTINATION"/>
-<org.eventb.core.invariant name="2" org.eventb.core.label="inv4" org.eventb.core.predicate="indice ≤ nbWaitingWagon"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="inv3" org.eventb.core.predicate="toBayonne ⊆ 1‥nbWagons"/>
 </org.eventb.core.machineFile>

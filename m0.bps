@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="46" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="AddToulouse/grd2/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="47" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="AddToulouse/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="47" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="AddToulouse/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="AddToulouse/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="47" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="AddToulouse/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="addBayonne/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="addBayonne/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="47" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="addBayonne/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="addBayonne/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="47" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="addBayonne/act1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="47" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="66" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="66" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="66" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addToulouse/grd2/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="68" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addToulouse/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="68" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="addToulouse/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="68" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="addBayonne/grd2/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="68" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="addBayonne/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="68" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="addBayonne/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="68" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
 </org.eventb.core.psFile>
