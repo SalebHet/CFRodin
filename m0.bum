@@ -6,9 +6,10 @@
 <org.eventb.core.action name=")" org.eventb.core.assignment="toBayonne ≔ ∅" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
 <org.eventb.core.seesContext name="(" org.eventb.core.target="c0"/>
-<org.eventb.core.invariant name=")" org.eventb.core.label="inv1" org.eventb.core.predicate="indice ∈ 1‥nbWagons+1"/>
+<org.eventb.core.invariant name=")" org.eventb.core.label="inv1" org.eventb.core.predicate="indice ≥ 1"/>
 <org.eventb.core.variable name="*" org.eventb.core.identifier="indice"/>
 <org.eventb.core.variable name="," org.eventb.core.identifier="toToulouse"/>
+<org.eventb.core.invariant name="2" org.eventb.core.label="inv4" org.eventb.core.predicate="indice ≤ nbWagons+1"/>
 <org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="toToulouse ⊆ 1‥nbWagons"/>
 <org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addToulouse">
 <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="indice ≤ nbWagons"/>

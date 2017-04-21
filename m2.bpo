@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="11">
+<org.eventb.core.poFile org.eventb.core.poStamp="18">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
 <org.eventb.core.poIdentifier name="DESTINATION" org.eventb.core.type="ℙ(DESTINATION)"/>
 <org.eventb.core.poIdentifier name="Bayonne" org.eventb.core.type="DESTINATION"/>
@@ -11,17 +11,18 @@
 <org.eventb.core.poPredicate name="waitingWagoq" org.eventb.core.predicate="partition(DESTINATION,{Toulouse},{Bayonne})" org.eventb.core.source="/CFRodin/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#5"/>
 <org.eventb.core.poPredicate name="waitingWagor" org.eventb.core.predicate="waitingWagon∈1 ‥ nbWagons → DESTINATION" org.eventb.core.source="/CFRodin/c0.buc|org.eventb.core.contextFile#c0|org.eventb.core.axiom#6"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="18">
 <org.eventb.core.poIdentifier name="destination" org.eventb.core.type="DESTINATION"/>
 <org.eventb.core.poIdentifier name="indice" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="isStopped" org.eventb.core.type="BOOL"/>
 <org.eventb.core.poIdentifier name="sameWagons" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.poIdentifier name="toBayonne" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.poIdentifier name="toToulouse" org.eventb.core.type="ℙ(ℤ)"/>
-<org.eventb.core.poPredicate name="destinatioo" org.eventb.core.predicate="indice∈1 ‥ nbWagons+1" org.eventb.core.source="/CFRodin/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#)"/>
-<org.eventb.core.poPredicate name="destinatiop" org.eventb.core.predicate="toToulouse⊆1 ‥ nbWagons" org.eventb.core.source="/CFRodin/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#-"/>
-<org.eventb.core.poPredicate name="destinatioq" org.eventb.core.predicate="toBayonne⊆1 ‥ nbWagons" org.eventb.core.source="/CFRodin/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#1"/>
-<org.eventb.core.poPredicate name="destinatior" org.eventb.core.predicate="sameWagons⊆1 ‥ nbWagons" org.eventb.core.source="/CFRodin/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#+"/>
+<org.eventb.core.poPredicate name="destinatioo" org.eventb.core.predicate="indice≥1" org.eventb.core.source="/CFRodin/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#)"/>
+<org.eventb.core.poPredicate name="destinatiop" org.eventb.core.predicate="indice≤nbWagons+1" org.eventb.core.source="/CFRodin/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#2"/>
+<org.eventb.core.poPredicate name="destinatioq" org.eventb.core.predicate="toToulouse⊆1 ‥ nbWagons" org.eventb.core.source="/CFRodin/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="destinatior" org.eventb.core.predicate="toBayonne⊆1 ‥ nbWagons" org.eventb.core.source="/CFRodin/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.invariant#1"/>
+<org.eventb.core.poPredicate name="destinatios" org.eventb.core.predicate="sameWagons⊆1 ‥ nbWagons" org.eventb.core.source="/CFRodin/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.invariant#+"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTIDENTdestinatioo" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="4">
 <org.eventb.core.poIdentifier name="destination'" org.eventb.core.type="DESTINATION"/>
@@ -32,52 +33,59 @@
 <org.eventb.core.poIdentifier name="indice'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPdestinatioo" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTdestinatioo" org.eventb.core.poStamp="4"/>
-<org.eventb.core.poSequent name="switch/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="11">
+<org.eventb.core.poSequent name="stop/grd1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="18">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTdestinatiop"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="indice∈dom(waitingWagon)∧waitingWagon∈ℤ ⇸ DESTINATION" org.eventb.core.source="/CFRodin/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#2|org.eventb.core.guard#'"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/CFRodin/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#2|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="indice∈dom(waitingWagon)∧waitingWagon∈ℤ ⇸ DESTINATION" org.eventb.core.source="/CFRodin/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#6|org.eventb.core.guard#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/CFRodin/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#6|org.eventb.core.guard#'"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTdestinatiop"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="switch/act2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="11">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPdestinatiop"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTdestinatiop" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="18">
+<org.eventb.core.poIdentifier name="isStopped'" org.eventb.core.type="BOOL"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdestinatiop" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTdestinatiop" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="waitingWagon(indice)≠destination" org.eventb.core.source="/CFRodin/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#6|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="isStopped=FALSE" org.eventb.core.source="/CFRodin/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#6|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="switch/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPdestinatioq"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="indice∈dom(waitingWagon)∧waitingWagon∈ℤ ⇸ DESTINATION" org.eventb.core.source="/CFRodin/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#2|org.eventb.core.action#*"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/CFRodin/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#2|org.eventb.core.action#*"/>
-<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPdestinatiop"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTALLHYPdestinatioq"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTdestinatiop" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTIDENTdestinatioq" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="18">
 <org.eventb.core.poIdentifier name="destination'" org.eventb.core.type="DESTINATION"/>
+<org.eventb.core.poIdentifier name="isStopped'" org.eventb.core.type="BOOL"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPdestinatiop" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTdestinatiop" org.eventb.core.poStamp="11">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="waitingWagon(indice)≠destination" org.eventb.core.source="/CFRodin/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#2|org.eventb.core.guard#'"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="isStopped=FALSE" org.eventb.core.source="/CFRodin/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#2|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdestinatioq" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTdestinatioq" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="isStopped=TRUE" org.eventb.core.source="/CFRodin/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.event#2|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTdestinatioq" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTIDENTdestinatior" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="18">
 <org.eventb.core.poIdentifier name="sameWagons'" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.poIdentifier name="indice'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPdestinatioq" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTdestinatioq" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicateSet name="EVTALLHYPdestinatior" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTdestinatior" org.eventb.core.poStamp="18">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="indice∈1 ‥ nbWagons − 1" org.eventb.core.source="/CFRodin/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#1|org.eventb.core.guard#'"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="waitingWagon(indice)=waitingWagon(indice+1)" org.eventb.core.source="/CFRodin/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#1|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTdestinatior" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTIDENTdestinatios" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="18">
 <org.eventb.core.poIdentifier name="toToulouse'" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.poIdentifier name="sameWagons'" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.poIdentifier name="indice'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPdestinatior" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTdestinatior" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="indice≤nbWagons" org.eventb.core.source="/CFRodin/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#.|org.eventb.core.guard#)"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="waitingWagon(indice)=Toulouse" org.eventb.core.source="/CFRodin/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#.|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdestinatios" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTdestinatios" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="indice≤nbWagons" org.eventb.core.source="/CFRodin/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#,|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="waitingWagon(indice)=Toulouse" org.eventb.core.source="/CFRodin/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#,|org.eventb.core.guard#'"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTdestinatios" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTIDENTdestinatiot" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="18">
 <org.eventb.core.poIdentifier name="sameWagons'" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.poIdentifier name="toBayonne'" org.eventb.core.type="ℙ(ℤ)"/>
 <org.eventb.core.poIdentifier name="indice'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPdestinatios" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTdestinatios" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="indice≤nbWagons" org.eventb.core.source="/CFRodin/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#0|org.eventb.core.guard#'"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="waitingWagon(indice)=Bayonne" org.eventb.core.source="/CFRodin/m0.bum|org.eventb.core.machineFile#m0|org.eventb.core.event#0|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdestinatiot" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#EVTIDENTdestinatiot" org.eventb.core.poStamp="18">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="indice≤nbWagons" org.eventb.core.source="/CFRodin/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#0|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="waitingWagon(indice)=Bayonne" org.eventb.core.source="/CFRodin/m1.bum|org.eventb.core.machineFile#m1|org.eventb.core.event#0|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/CFRodin/m2.bpo|org.eventb.core.poFile#m2|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="18">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="destination∈DESTINATION" org.eventb.core.source="/CFRodin/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#0"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="isStopped∈BOOL" org.eventb.core.source="/CFRodin/m2.bum|org.eventb.core.machineFile#m2|org.eventb.core.invariant#1"/>
 </org.eventb.core.poPredicateSet>
