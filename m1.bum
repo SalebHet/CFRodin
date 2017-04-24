@@ -8,7 +8,7 @@
 <org.eventb.core.variable name="*" org.eventb.core.identifier="sameWagons"/>
 <org.eventb.core.invariant name="+" org.eventb.core.label="inv1" org.eventb.core.predicate="sameWagons ⊆ 1‥nbWagons"/>
 <org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="grouper">
-<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="indice ∈ 1‥nbWagons−1"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="indice &lt; nbWagons"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="waitingWagon(indice) = waitingWagon(indice+1)"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="sameWagons ≔ sameWagons ∪ {indice}" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="indice ≔ indice+1" org.eventb.core.label="act2"/>
@@ -17,9 +17,9 @@
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="addToulouse"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="indice ≤ nbWagons"/>
 <org.eventb.core.guard name="'" org.eventb.core.label="grd2" org.eventb.core.predicate="waitingWagon(indice) = Toulouse"/>
-<org.eventb.core.action name="internal1" org.eventb.core.assignment="indice ≔ indice+1" org.eventb.core.label="act3"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="toToulouse ≔ toToulouse ∪ {indice} ∪ sameWagons" org.eventb.core.label="act1"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="sameWagons ≔ ∅" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="indice ≔ indice+1" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="internal1" org.eventb.core.assignment="sameWagons ≔ ∅" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="-" org.eventb.core.identifier="indice"/>
 <org.eventb.core.variable name="." org.eventb.core.identifier="toToulouse"/>
@@ -27,9 +27,9 @@
 <org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addBayonne">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="addBayonne"/>
 <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="indice ≤ nbWagons"/>
-<org.eventb.core.action name="internal1" org.eventb.core.assignment="indice ≔ indice+1" org.eventb.core.label="act3"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="waitingWagon(indice) = Bayonne"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="toBayonne ≔ toBayonne ∪ {indice} ∪ sameWagons" org.eventb.core.label="act1"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="sameWagons≔ ∅" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="indice ≔ indice+1" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="internal1" org.eventb.core.assignment="sameWagons≔ ∅" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>
